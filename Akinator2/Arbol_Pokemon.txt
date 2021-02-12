@@ -1,0 +1,240 @@
+66
+Es Humanoide?
+36
+Es Objeto?
+20
+Es Legendario?
+10
+Es de tipo Normal?
+6
+Tiene 2 atributos elementales?
+4
+Es amarillo?
+1
+Wobuffet!
+3
+Magikarp!
+5
+Pikachu!
+8
+Es un dragon?
+7
+Psyduck!
+9
+Charizard!
+14
+Es de primera generacion?
+12
+Puede Volar?
+11
+Zigzagon!
+13
+Swellow!
+18
+Puede hablar?
+16
+Es un oso?
+15
+Rattata!
+17
+Zigzagon!
+19
+Meowth!
+26
+Es un dragon?
+24
+Creo el universo?
+22
+Es un ave y controla el hielo?
+21
+Moltres!
+23
+Articuno!
+25
+Arceus!
+32
+Es de 5ta Generacion?
+30
+Esta basado en el quetzacoatl?
+28
+Controla el espacio?
+27
+Dialga!
+29
+Palkia!
+31
+Rayquaza!
+34
+Es blanco?
+33
+Zekrom!
+35
+Reshiram!
+50
+Es mayor a 2da generacion?
+44
+Tiene forma de bolas o es un conjunto de bolas?
+37
+Muk!
+39
+Unown!
+41
+Onix!
+43
+Staryu!
+45
+Magnamite!
+47
+Voltorb!
+49
+Weezing!
+60
+Es tipo Roca?
+56
+Se reensambla a un objeto del hogar?
+52
+Es tipo acero psiquico?
+51
+Klinklang!
+54
+Tiene forma de campana?
+53
+Metagross!
+55
+Bronzong!
+58
+Es un candelabro?
+57
+Klefkey!
+59
+Chandeleir!
+64
+Parece una estatua?
+62
+Se parece a un sol?
+61
+Lunatone!
+63
+Solrock!
+65
+Nosepass!
+104
+Es un luchador?
+88
+Es psiquico?
+80
+Es arriba de 3ra Generacion?
+72
+Su elemento es un organismo vivo?
+68
+Es de primera generacion?
+67
+Sableye!
+70
+Es tipo electrico?
+69
+Magmar!
+71
+Electroboss!
+76
+Es un bicho?
+74
+Tiene un elemnto?
+73
+Cactune!
+78
+Tiene aspecto femenino??
+84
+Tiene mas de un elemento?
+82
+Es legendario?
+81
+Lowpunny!
+83
+Darkrai!
+86
+Es de tipo siniestro?
+85
+Toxicroak!
+87
+Bisharp!
+100
+Es legendario?
+94
+Tiene mas de un elemento?
+90
+Es de primera generacion?
+89
+Gothitelle!
+92
+Tiene un pendulo?
+91
+Hypno!
+93
+Alakazam!
+96
+Es hada?
+95
+Jynx!
+98
+Es un mimo?
+97
+Gardevoir!
+99
+Mr mime!
+102
+Viene del espacio?
+101
+Mewtwo!
+103
+Neoxis!
+108
+Usa las manos para pelear?
+106
+Tiene forma de trompo?
+105
+Hitmonlee!
+107
+Hitmontop!
+120
+Tiene mas de un elemento?
+118
+Utiliza objetos?
+114
+Es arriba de 3ra Generacion?
+112
+Es de 3ra Generacion?
+110
+Es de 2da Generacion?
+109
+Machoke!
+111
+Hitmonchan!
+113
+Hariyama!
+116
+Es de color azul?
+115
+Throh!
+117
+Sawk!
+119
+Conkeldur!
+124
+Son pokemones iniciales?
+122
+Su personaje parece luchador mexicano?
+121
+Lucario!
+123
+Hawlucha!
+128
+Es de 3ra Generacion?
+126
+Es de 4ta Generacion?
+125
+Incineroar!
+127
+Infernape!
+129
+Blaziken!

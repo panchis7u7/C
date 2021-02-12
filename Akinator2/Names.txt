@@ -1,0 +1,63 @@
+1 Wobuffet!
+3 Magikarp!
+4 Es amarillo?
+5 Pikachu!
+6 Tiene 2 atributos elementales?
+7 Psyduck!
+8 Es un dragon?
+9 Charizard!
+10 Es de tipo Normal?
+11 Zigzagon!
+12 Puede Volar?
+13 Swellow!
+14 Es de primera generacion?
+15 Rattata!
+16 Es un oso?
+17 Zigzagon!
+18 Puede hablar?
+19 Meowth!
+20 Es Legendario?
+21 Moltres!
+22 Es un ave y controla el hielo?
+23 Articuno!
+24 Creo el universo?
+25 Arceus!
+26 Es un dragon?
+27 Dialga!
+28 Controla el espacio?
+29 Palkia!
+30 Esta basado en el quetzacoatl?
+31 Rayquaza!
+32 Es de 5ta Generacion?
+33 Zekrom!
+34 Es blanco?
+35 Reshiram!
+36 Es Objeto?
+37 Muk!
+39 Unown!
+41 Onix!
+43 Staryu!
+44 Tiene forma de bolas o es un conjunto de bolas?
+45 Magnamite!
+47 Voltorb!
+49 Weezing!
+50 Es mayor a 2da generacion?
+51 Klinklang!
+52 Es tipo acero psiquico?
+53 Metagross!
+54 Tiene forma de campana?
+55 Bronzong!
+56 Se reensambla a un objeto del hogar?
+57 Klefkey!
+58 Es un candelabro?
+59 Chandeleir!
+60 Es tipo Roca?
+61 Lunatone!
+62 Se parece a un sol?
+63 Solrock!
+64 Parece una estatua?
+65 Nosepass!
+66 Es Humanoide?
+88 Es psiquico?
+104 Es un luchador?
+108 Usa las manos para pelear?
