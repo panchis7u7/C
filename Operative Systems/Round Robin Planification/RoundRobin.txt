@@ -1,0 +1,13 @@
+Round Robin es uno de los algoritmos preventivos empleados por los programadores de procesos y redes en la informática. Segmentos de tiempo se asignan a cada proceso en porciones iguales y en orden circular, manejando todos los procesos sin prioridad. La programación por turnos es simple, fácil de implementar y libre de inanición (donde a un proceso se le niegan perpetuamente los recursos necesarios para procesar su trabajo. La inanición puede deberse a errores en la planificacion o exclusión mutua)
+
+Terminologia:
+
+Time Quantum o tiempo cuantum: Es la cantidad de tiempo compartido que se otoriga a cada proceso, interrumpiendo el trabajo si no se completa para entonces.
+
+Cola de solicitud: Es el orden por el cual los procesos van llegando y son manejados.
+
+AT: Tiempo de llegada (Arrival time).
+
+BT: Tiempo de despegue (Burst time).
+
+
