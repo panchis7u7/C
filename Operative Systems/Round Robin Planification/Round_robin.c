@@ -25,12 +25,26 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Prototipos de funcion.
+void getSystem();
+void getSystem();
+void printSystem();
+void schedule();
+void WatingTime();
+void printScheduling();
+void addToQueue(int);
+unsigned int executionRemained();
+unsigned int getNextProcess();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Cola de solicitudes.
 
 typedef struct queue
 {
 	unsigned int p;
-	struct el * next;
+	struct queue* next;
 } Queue;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,14 +63,16 @@ int main(int argc, char* argv[])
 {
 	int opt;
 
-	while((opt = getopt(argc, argv, ":p:q:")) != -1){
+	while((opt = getopt(argc, argv, "p:q:")) != -1){
 		switch(opt){
 			case 'p':
-				nProcesses = (int)optarg;
+				nProcesses = atoi(optarg);
+				printf("No de procesos: %d.\n", nProcesses);
 				opciones |= NUM_PROCESSES;
 				break;
 			case 'q':
-				tQuantum = (int)optarg;
+				tQuantum = atoi(optarg);
+				printf("Time Quantum: %d.\n", tQuantum);
 				opciones |= TIME_QUANTUM;
 				break;
 			default:
@@ -78,39 +94,37 @@ int main(int argc, char* argv[])
 void getSystem()
 {
 	int i;
-	printf("\nNumero de procesos: ");
-	scanf("%d", &nProcesses);
-	
-	printf("\nThe Quantum: ");
-	scanf("%d", &tQuantum);
 	
 	for(i=0; i<nProcesses; i++ )
 	{
-		printf("\n Arrival Time of p%d: ", i);
+		printf("\n-------------------------------------\n");
+		printf("Tiempo de llegada de p%d: ", i+1);
 		scanf("%d", &processes[i][0]);
-		printf("\n Burst time for p%d: ", i);
+		printf("Tiempo de ejecucion para p%d: ", i+1);
 		scanf("%d", &processes[i][1]);
 		processes[i][2] = processes[i][1];
-		printf("\n-----------");
+		printf("-------------------------------------\n");
 	}
 }
 
 void printSystem()
 {
 	int i;
-	printf("\n\t\tOur System is :");
-	printf("\nQuantum: %d",tQuantum);
-	printf("\nPi:  AT  BT RT");
+	printf("\nNuestro sistemas es:");
+	printf("\nQuantum: %d", tQuantum);
+	printf("\nPi:  AT BT RT");
 	for(i=0; i<nProcesses; i++)
 	{
-		printf("\nP%d:  %d  %d  %d", i, processes[i][0], processes[i][1], processes[i][2]);
+		printf("\nP%d:  %d  %d  %d", i+1, processes[i][0], processes[i][1], processes[i][2]);
 	}
-	printf("\nThe cola de solicitud: ");
-	Queue* n;
-	for(n=q; n!=NULL; n=n->next)
-	{
+	printf("\nLa cola de solicitud es: ");
+	Queue* n = q;
+
+	while(n != NULL){
 		printf("P%d ",n->p);
+		n = n->next;
 	}
+	printf("\n");
 }
 
 unsigned int executionRemained()
@@ -126,15 +140,14 @@ unsigned int executionRemained()
 	}
 	return x;
 }
-void addToq(int i)
+void addToQueue(int i)
 {
 	Queue* n, *n1;
-	n = (Queue *)malloc(sizeof(Queue));
+	n = (Queue*)malloc(sizeof(Queue));
 	n->next = NULL;
 	n->p = i;
 	if(q == NULL)
 	{
-		
 		q = n;
 	}
 	else
@@ -143,6 +156,7 @@ void addToq(int i)
 		n1 -> next = n;
 	}
 }
+
 void addArrivedProcessesToq()
 {
 	int i;
@@ -150,10 +164,11 @@ void addArrivedProcessesToq()
 	{
 		if(processes[i][0] == time)
 		{
-			addToq(i);
+			addToQueue(i);
 		}
 	}
 }
+
 unsigned int getNextProcess()
 {
 	Queue *n;
@@ -171,6 +186,7 @@ unsigned int getNextProcess()
 		return x;
 	}
 }
+
 void schedule()
 {
 	unsigned int np, toRun, q, i;
@@ -208,7 +224,7 @@ void schedule()
 			}
 			if(processes[np][2] > 0)
 			{
-				addToq(np);
+				addToQueue(np);
 			}
 		}
 		
@@ -218,18 +234,19 @@ void schedule()
 		
 	}
 }
+
 void printScheduling()
 {
 	int i;
 	printf("\n\nScheduling: \n");
 	for(i=0; i<time; i++)
 	{
-		printf("[%d-%d] (P%d) \n",i,i+1 ,scheduler[i]);
+		printf("[%d-%d] (P%d) \n",i,i+1 ,scheduler[i]+1);
 	}
 	printf("\n\nWaiting Time: \n");
 	for(i=0; i<nProcesses; i++)
 	{
-		printf("\nP%d: %d", i, WT[i]);
+		printf("\nP%d: %d", i+1, WT[i]);
 	}
 	//counting Average Waiting Time...
 	float AWT = 0.0;
@@ -238,9 +255,10 @@ void printScheduling()
 		AWT = AWT+WT[i];
 	}
 	AWT = AWT/nProcesses;
-	printf("\n\nAverage Waiting Time: %f", AWT);
+	printf("\n\nTiempo promedio de espera: %f\n", AWT);
 	
 }
+
 void WatingTime()
 {
 	int i;
