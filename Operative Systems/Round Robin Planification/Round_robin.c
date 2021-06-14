@@ -115,9 +115,9 @@ void getSystem() {
 	for(i=0; i<nProcesses; i++ )
 	{
 		printf("\n%s-------------------------------------\n", KYEL);
-		printf("%sTiempo de llegada de p%d: %s", KWHT, i+1, KRED);
+		printf("%sTiempo de llegada de p%d: %s", KWHT, i+1, KYEL);
 		scanf("%d", &processes[i][0]);
-		printf("%sTiempo de ejecucion para p%d: %s", KWHT, i+1, KRED);
+		printf("%sTiempo de ejecucion para p%d: %s", KWHT, i+1, KYEL);
 		scanf("%d", &processes[i][1]);
 		processes[i][2] = processes[i][1];
 		printf("%s-------------------------------------%s\n", KYEL, KWHT);
@@ -132,17 +132,17 @@ void getSystem() {
 void printSystem() {
 	int i;
 	printf("\nNuestro sistemas es:");
-	printf("\n%sQuantum: %s%d", KWHT, tQuantum, KRED);
+	printf("\n%sQuantum: %s%d", KWHT, KYEL, tQuantum);
 	printf("\nPi:  AT BT RT");
 	for(i=0; i<nProcesses; i++)
 	{
-		printf("\nP%d:  %d  %d  %d", i+1, processes[i][0], processes[i][1], processes[i][2]);
+		printf("\n%sP%d:  %s%d  %d  %d", KWHT, i+1, KYEL, processes[i][0], processes[i][1], processes[i][2]);
 	}
-	printf("\nLa cola de solicitud es: ");
+	printf("\n%sLa cola de solicitud es: ", KWHT);
 	Queue* n = q;
 
 	while(n != NULL){
-		printf("P%d ",n->p);
+		printf("%sP%d ", KGRN, n->p);
 		n = n->next;
 	}
 	printf("\n");
@@ -281,15 +281,15 @@ void schedule() {
 
 void printScheduling() {
 	int i;
-	printf("\n\nScheduling: \n");
+	printf("\n\nPlanificacion: \n");
 	for(i=0; i<time; i++)
 	{
-		printf("[%d-%d] (P%d) \n",i,i+1 ,scheduler[i]+1);
+		printf("[%s%d-%d%s] (P%d) \n", KYEL, i, i+1, KWHT, scheduler[i]+1);
 	}
 	printf("\n\nWaiting Time: \n");
 	for(i=0; i<nProcesses; i++)
 	{
-		printf("\nP%d: %d", i+1, WT[i]);
+		printf("\nP%d: %s%d", i+1, KYEL, WT[i]);
 	}
 	//counting Average Waiting Time...
 	float AWT = 0.0;
@@ -298,7 +298,7 @@ void printScheduling() {
 		AWT = AWT+WT[i];
 	}
 	AWT = AWT/nProcesses;
-	printf("\n\nTiempo promedio de espera: %f\n", AWT);
+	printf("\n\nTiempo promedio de espera: %s%f%s\n", KYEL, AWT, KWHT);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
