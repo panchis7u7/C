@@ -1,5 +1,5 @@
 CC=g++
-CPPFLAGS=-Wall -Wextra -lcurl -lcurlpp -pedantic-errors -std=c++2a
+CPPFLAGS=-Wall -Wextra -lcurl -lcurlpp -pedantic-errors -pthread -std=c++2a
 PROG=main
 
 OBJS=main.o
