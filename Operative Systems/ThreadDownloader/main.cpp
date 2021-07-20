@@ -61,9 +61,9 @@ int main()
     std::vector<std::size_t> sizes;
     std::mutex size_lock;
 
-    for(const auto& p: {"8859-1.TXT"s, "8859-2.TXT"s, "8859-3.TXT"s, "8859-4.TXT"s, "8859-5.TXT"s,
-                        "8859-6.TXT"s, "8859-7.TXT"s, "8859-8.TXT"s, "8859-9.TXT"s, "8859-10.TXT"s,
-                        "8859-11.TXT"s,"8859-13.TXT"s,"8859-14.TXT"s,"8859-15.TXT"s,"8859-16.TXT"s})
+    for(const auto& p: {"8859-1.txt"s, "8859-2.txt"s, "8859-3.txt"s, "8859-4.txt"s, "8859-5.txt"s,
+                        "8859-6.txt"s, "8859-7.txt"s, "8859-8.txt"s, "8859-9.txt"s, "8859-10.txt"s,
+                        "8859-11.txt"s,"8859-13.txt"s,"8859-14.txt"s,"8859-15.txt"s,"8859-16.txt"s})
     {
         downloaders.emplace_back([p, l=line++, &sizes,&size_lock]
         {
@@ -132,9 +132,9 @@ int main()
 
     std::vector<std::future<std::size_t>> sizes;
 
-    for(const auto& p: {"8859-1.TXT"s, "8859-2.TXT"s, "8859-3.TXT"s, "8859-4.TXT"s, "8859-5.TXT"s,
-                        "8859-6.TXT"s, "8859-7.TXT"s, "8859-8.TXT"s, "8859-9.TXT"s, "8859-10.TXT"s,
-                        "8859-11.TXT"s,"8859-13.TXT"s,"8859-14.TXT"s,"8859-15.TXT"s,"8859-16.TXT"s})
+    for(const auto& p: {"8859-1.txt"s, "8859-2.txt"s, "8859-3.txt"s, "8859-4.txt"s, "8859-5.txt"s,
+                        "8859-6.txt"s, "8859-7.txt"s, "8859-8.txt"s, "8859-9.txt"s, "8859-10.txt"s,
+                        "8859-11.txt"s,"8859-13.txt"s,"8859-14.txt"s,"8859-15.txt"s,"8859-16.txt"s})
     {
         sizes.emplace_back(std::async(std::launch::async, [p, l=line++]
         {
